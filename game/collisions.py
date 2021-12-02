@@ -1,4 +1,4 @@
-"""This class handles when the ball hits the boundaries or the paddle and then changes the angle of the ball."""
+"""This class handles when the ball hits the boundaries or the paddle and then changes the angle of the ball. It uses abstraction by only giving the parameters from the director class, limiting what is viewed by the user."""
 from game import constants
 import pygame
 import random

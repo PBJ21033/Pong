@@ -1,5 +1,5 @@
 """
-    Uses abstraction to only allow the user to see waht is needed and nothing else. All this class does is handles the other classes to update the game board.
+    Uses abstraction to only allow the user to see waht is needed and nothing else. It uses inheritance because we neeed to be able to get the inputs to direct the updates and other attributes in this class.All this class does is handles the other classes to update the game board.
 """
 
 import pygame
@@ -26,6 +26,13 @@ class Director(Input_Service):
         self.left_paddle()
         self.right_paddle()
         self.create_ball()
+        self.actors = []
+
+        for actor in self.paddle:
+            self.actors.append(actor)
+        
+        for actors in self.ball:
+            self.actors.append(actors)
 
     
     def left_paddle(self):
@@ -60,4 +67,4 @@ class Director(Input_Service):
             self.event.move_ball(self.ball)
             self.collisions.ball_hit_paddle(self.ball, self.paddle)
             self.collisions.ball_hit_wall(self.ball, self.paddle)
-            self.update.draw_to_screen(self.paddle, self.ball)
+            self.update.draw_to_screen(self.actors)

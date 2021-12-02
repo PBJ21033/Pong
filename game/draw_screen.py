@@ -1,5 +1,5 @@
 """
-    This class gives instances of inheritance from the Input Service class and it controls the drawing of the actors to the screen. 
+    This class gives instances of inheritance from the Input Service class and it controls the drawing of the actors to the screen. It also uses abstraction and polymorphism in the code. It uses abstraction because we do not want this class messed with as much and the user does not need to know any of the paremeters for this class to work. We use polymorphism because we only need to go through one array to display the paddles and the ball since they are both actors. This class does not care who the actors are but as long as they are there.
 """
 
 
@@ -18,12 +18,10 @@ class Draw_screen:
         self.COLOUR = (255,255,255)
         self.central_line = pygame.Rect(constants.WIDTH/2, 0, 1, constants.HEIGHT)
 
-    def draw_to_screen(self, paddles, balls):
+    def draw_to_screen(self, actors):
         self.output.get_screen().fill((0, 0, 0))
-        for paddle in paddles:
-            pygame.draw.rect(self.output.get_screen(),self.COLOUR, paddle)
-        for ball in balls:
-            pygame.draw.rect(self.output.get_screen(), self.COLOUR, ball)
+        for actor in actors:
+            pygame.draw.rect(self.output.get_screen(),self.COLOUR, actor)
         
         pygame.draw.rect(self.output.get_screen(), self.COLOUR, self.central_line)
         pygame.display.flip()

@@ -1,5 +1,5 @@
 """This is the super class the controls the Paddle and Ball class. It sets the heights, widths, and velocity that will be used later in the program.
-It inherits from the Rect class from pygame and it also is a super class to the paddle and ball classes. One other thing that this class does is show the instances of encapsulation because if these variables get ruiend, then the game will not work.
+It inherits from the Rect class from pygame and it also is a super class to the paddle and ball classes. One other thing that this class does is show the instances of encapsulation because if these variables get ruiend, then the game will not work. Also this uses inheritance from pygames.rect class that allows us to draw rectangles on the screen. 
 """
 
 import pygame

@@ -1,5 +1,5 @@
 """
-    This class controls the movement of the ball and the paddle. 
+    This class controls the movement of the ball and the paddle.  This just uses abstraction from the director class, limiting what the user can see in this class. This is used because this class does not care what the variable paremeters are as long as it is either a paddle or a ball.
 """
 
 

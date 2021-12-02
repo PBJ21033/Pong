@@ -1,4 +1,6 @@
-#controls the player inputs
+"""
+    This class uses encapsulation and handles the input given to the game from the keyboard. Encapsulation is used because if the variables are messed with for the keys, then the game will not function properly because the paddles will not move. 
+"""
 import pygame
 class Input_Service:
     def __init__(self):

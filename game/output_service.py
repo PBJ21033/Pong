@@ -1,3 +1,7 @@
+"""
+This class controls the screen clock and all screen sizes. It uses abstraction by taking the vairbles from the constants file. The user does not need to know what the screen size is so it is not included in this class.
+
+"""
 import pygame
 
 from game.input_service import Input_Service
